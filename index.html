@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stopwatch</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: rigid;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:gold;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+button:hover {
+    background-color: blue;
+}
+button:active {
+    background-color:white;
+}
+.stopwatch {
+    border: 5px solid black; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    height:250px;
+    margin: auto;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    background-size: 600% 600%;
+    background: linear-gradient(270deg, steelblue, lightblue, royalblue);
+    animation: gradientMove 8s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
+</head>
+<body>
+<div class="stopwatch">
+    <h1 id="display">00:00:00</h1>
+    <button onclick="startStopwatch()">Start</button>
+    <button onclick="stopStopwatch()">Stop</button>
+    <button onclick="resetStopwatch()">Reset</button>
+</div>
+<script src="stopwatch.js"></script>
+</body>
+</html>
